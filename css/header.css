@@ -1,0 +1,146 @@
+/* CSS Document */
+header#top {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  display: table;
+  padding: 10px 10px 12px 10px;
+  overflow: hidden;
+}
+header#top h1 {
+  display: table-cell;
+}
+header#top #topnavi {
+  font-size: 9.6px;
+  color: #0033cc;
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+  padding-top: 1rem;
+}
+header#top #topnavi li {
+  display: inline;
+  margin-left: 24px;
+}
+
+#global {
+  display: table;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  background-color: rgba(1, 32, 82, 0.7);
+  line-height: 0.9rem;
+}
+#global.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+#global h2 {
+  width: 20%;
+  min-width: 380px;
+  display: table-cell;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+#global h2 img {
+  width: 100%;
+  height: auto;
+}
+#global ul {
+  color: #666666;
+  display: table-cell;
+  white-space: nowrap;
+}
+#global ul:nth-of-type(1) {
+  vertical-align: top;
+  height: 4rem;
+  overflow: hidden;
+}
+#global ul:nth-of-type(1) li {
+  display: table-cell;
+  padding-left: 2rem;
+  line-height: 0.8rem;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+#global ul:nth-of-type(1) li.on a {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#global ul:nth-of-type(1) li a {
+  display: block;
+  padding: 1.4rem;
+  line-height: 0.9rem;
+  text-align: center;
+}
+@media all and (max-width: 1500px) {
+  #global ul:nth-of-type(1) li a {
+    padding-bottom: 1.4rem;
+  }
+}
+#global ul:nth-of-type(1) li a span {
+  font-size: 2rem;
+  float: left;
+  margin: -0.3rem 0.5rem 0;
+}
+#global ul:nth-of-type(2), #global ul:nth-of-type(3), #global ul:nth-of-type(4) {
+  display: none;
+  position: absolute;
+  top: 4.9rem;
+  left: 0;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  text-align: center;
+}
+#global ul:nth-of-type(2) li, #global ul:nth-of-type(3) li, #global ul:nth-of-type(4) li {
+  display: table-cell;
+  padding: 3rem;
+  opacity: 0;
+  vertical-align: top;
+}
+#global ul:nth-of-type(2) li span, #global ul:nth-of-type(3) li span, #global ul:nth-of-type(4) li span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+#global ul:nth-of-type(2) li a:hover, #global ul:nth-of-type(3) li a:hover, #global ul:nth-of-type(4) li a:hover {
+  color: #5f9dff;
+}
+#global ul a {
+  color: #fff;
+}
+#global ul a.active {
+  color: #2c7eff;
+  text-decoration: line-through;
+}
+#global ul i {
+  font-style: normal;
+  font-family: century;
+  font-weight: normal;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.3rem;
+}
+#global #live {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  z-index: 3;
+  width: 14.0%;
+  min-width: 220px;
+}
+@media all and (max-width: 1200px) {
+  #global #live {
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+    z-index: 3;
+    min-width: 200px;
+    width: 25%;
+  }
+}
+#global #live img {
+  width: 100%;
+  height: auto;
+}

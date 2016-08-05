@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+header#top {
+	width: $max;
+	background-color: $white;
+	overflow: hidden;
+	display: table;
+	padding: 10px 10px $FS 10px;
+	overflow: hidden;
+	
+	h1 {
+		display: table-cell;
+	}
+
+	#topnavi {
+		font-size: $FS * 0.8;
+		color: #0033cc;
+		display: table-cell;
+		text-align: right;
+		vertical-align: middle;
+		padding-top: 1rem;
+		
+		li {
+			display: inline;
+			margin-left: $FS * 2;
+		}
+	}
+}
+		
+#global {
+	display: table;
+	width: $max;
+	position: $r;
+	z-index: 5;
+	background-color: $modal4;
+	line-height: 0.9rem;
+	
+	&.fix {
+		@include fixT(0,0,5);
+	}
+
+	h2 {
+		width: $max * 0.2;
+		min-width: 380px;
+		display: table-cell;
+		padding: 0.5rem 2rem 0.5rem 0.5rem;
+		
+		img {
+			width: $max;
+			height: auto;
+		}
+	}
+	
+	ul {
+		color: lighten($black, 40%);
+		display: table-cell;
+		white-space: nowrap;
+		
+		&:nth-of-type(1) {
+			vertical-align: top;
+			height: 4rem;
+			overflow: hidden;
+			
+			li {
+				display: table-cell;
+				padding-left: 2rem;
+				line-height:  0.8rem;
+				white-space: nowrap;
+				vertical-align: bottom;
+				
+				&.on {
+					
+					a {
+						background-color: rgba($black , 0.7);
+					}
+				}
+			
+				a {
+					display: block;
+					padding: 1.4rem;
+					line-height: 0.9rem;
+					text-align: center;
+					
+					@include media($of) {
+						padding-bottom: 1.4rem;
+					}
+					
+					span {
+						font-size: 2rem;
+						float: left;
+						margin: -0.3rem 0.5rem 0;
+					}
+				}
+			}
+		}
+		
+		&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4) {
+			display: none;
+			@include abT(4.9rem,0,11);
+			background-color: rgba($black , 0.8);
+			width: $max;
+			text-align: center;
+			
+			li {
+				display: table-cell;
+				padding: 3rem;
+				opacity: 0;
+				vertical-align: top;
+		
+				span {
+					font-size: 2rem;
+					display: block;
+					margin-bottom: 1rem;
+				}
+				
+				a:hover {
+					color: lighten($blue , 10%);
+				}
+			}
+		}
+		
+		a {
+			color: $white;
+			
+			&.active {
+				color: $blue;
+				text-decoration: line-through; 
+			}
+		}
+		
+		i {
+			font-style: normal;
+			font-family: century;
+			font-weight: normal;
+			font-size: 0.8rem;
+			display: block;
+			margin-top: 0.3rem;
+		}
+	}
+	
+	#live {
+		@include abB(0.5rem,1rem,3);
+		width: $max * 0.14;
+		min-width: 220px;
+		
+		@include media($ot) {
+			@include abT(6rem,1rem,3);
+			min-width: 200px;
+			width: $max * 0.25;
+		}
+		
+		img {
+			width: $max;
+			height: auto;
+		}
+	}
+}

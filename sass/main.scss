@@ -1,0 +1,316 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+article {
+	width: $max;
+	clear: both;
+	position: $r;
+	background: url(#{$ip}common/dot.png);
+
+	#pan {
+		display: none;
+		@include fixB(0,0,1);
+		padding: 0.5rem;
+		width: $max;
+		color: $white;
+		background-color: $modal4;
+	}
+	
+		header#title {
+			text-align: center;
+			color: $white !important;
+			padding: 10rem 0 2rem 0;
+			transform: translateY(50px);
+			opacity: 0;
+			text-shadow: 0.1rem 0.1rem 0.1rem $black;
+			
+			&.load {
+				transform: translateY(0);
+				opacity: 1;
+				transition: all 1s ease 0;
+				text-shadow: 3px rgba($black, 0.3);
+			}
+			
+				
+			h3 {
+				font-size: 2.5rem;
+				font-family: century;
+				
+				span {
+					display: block;
+					font-size: 4rem;
+					margin-bottom: 1rem;
+				}
+			}
+		
+			p {
+				margin-top: 1rem;
+				font-size: 1.5rem;
+				font-weight: normal;
+				font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+			}
+		}
+		
+	.half {
+		width: $max / 2;
+		min-width: $nf / 2;
+		float: left;
+		clear: none;
+		border-color: lighten($black,50%);
+		border-style: dotted;
+		padding: 10rem $max*0.03 !important;
+	
+		h5,dl,ul,p,table {
+			margin: 1rem 0;
+		}
+	}
+		
+	.one_third {
+		width: $max / 3;
+		min-width: $nf * 0.27;
+		clear: none;
+		padding: 0 $max*0.015 !important;
+		float: left;
+		
+		&:nth-of-type(3n-1) {
+			border-left: lighten($black,50%) dotted 1px;
+			border-right: lighten($black,50%) dotted 1px;
+		}
+		
+		section {
+			padding-top: 0 !important;
+		
+			h5 {
+				margin-top: 0 !important;
+			}
+		}
+		
+		p {
+			margin: 0 1rem 2rem 1rem;
+		}
+		
+		img {
+			width: $max;
+			height: auto;
+		}
+	}
+	
+	.quarter {
+		width: $max / 4;
+		min-width: $nf*0.9 / 4;
+		float: left;
+		clear: none;
+		padding: 1rem !important;
+		
+		dl,p {
+			margin-top: 1rem;
+		}
+		
+		img {
+			width: $max;
+			height: auto;
+			min-width: 187.5px !important;
+		}
+	}
+	
+	div.contents,.double {
+		padding: 0 !important;
+		width: $max !important;
+		
+		h4 {
+			margin-top: 5rem;
+		}
+		
+		.half {
+			padding-top: 0 !important;
+		}
+		
+		h5 {
+			margin-top: 5rem;
+		}
+		
+		&> img {
+			height: auto;
+			padding: 0 $max*0.015 !important;
+			border: none;
+		}
+	}
+	.double .one_third {
+		padding-bottom: 5rem !important;
+		
+		 p {
+			overflow: hidden;
+			background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
+			line-height: 28px;
+		 }
+	}
+		
+	section header,div.contents header {
+		text-align: center;
+		margin-bottom: 5rem;
+		color: $navy;
+		
+		h4 {
+			font-size: 2rem;
+			line-height: $max;
+			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+		}
+		
+		p {
+			font-family: century;
+			margin: 0.5rem 0 0 !important;
+		}
+	}
+
+	.contents {
+		width: $max;
+		clear: both;
+		background: center center no-repeat fixed;
+		overflow: hidden;
+		background-size: cover;
+		padding: 10rem $max*0.03;
+		
+		&.bg0 {
+			background-image: url(#{$ip}common/09.png);
+		}
+		
+		&.bg1 {
+			background-image: url(#{$ip}common/10.png);
+		}
+		
+		&.bg2 {
+			background-image: url(#{$ip}common/11.png);
+		}
+		
+		&.bg3 {
+			background-image: url(#{$ip}common/12.png);
+		}
+			
+		&.bg4 {
+			background-image: url(#{$ip}common/13.png);
+		}
+		
+		&.bg5 {
+			background-image: url(#{$ip}common/14.png);
+		}
+		
+		section {
+			padding: 5rem 0;
+			background: none;
+		}
+		
+		&> img:not(.one_third):not(.half) {
+			width: $max;
+			height: auto;
+			margin-bottom: 2rem;
+		}
+	
+		.back_gray,.back_gray th,.back_gray td {
+			background-color: lighten($modal,80%);
+		}
+	
+		.back_white,.back_white th,.back_white td {
+			background-color: lighten($modal2,80%);
+		}
+
+		hr {
+			border-top: #666 1px dotted;
+			margin: $FS*2 0 $FS*5 0;
+			height: 0;
+			clear: both;
+			overflow: hidden;
+		}
+		
+		figure {
+			 font-size: 0.8rem;
+			 line-height: 1rem;
+			 margin-bottom: 3rem;
+			 text-align: center;
+			 
+			 figcaption {
+				 margin-top: 0.5rem;
+			}
+		}
+				
+		h5,caption {
+			color: $navy;
+			margin-bottom: 1rem;
+			padding: 0.5rem;
+			font-size: 1.25rem;
+			text-align: center;
+			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+		}
+		
+		dl,.frame,.box {
+			padding: 1rem;
+			border: #999 3px double;
+			overflow: hidden;
+			zoom: 1;
+			background-color: $modal2;
+			margin: 0.5rem;
+		}
+						
+		dt {
+			color: $navy;
+			font-weight: bold;
+			clear: both;
+			text-align: center;
+			margin-top: 2rem;
+			
+			&:first-child {
+				margin: 0;
+			}
+		}
+			
+		dd {
+			overflow: hidden;
+			text-align: center;
+			
+			a {
+				color: $blue;
+				
+				span {
+					margin-right: $FS/2;
+				}
+			}
+		}
+		
+		.box {
+			margin: 3rem 0 !important;
+			
+			dt {
+				float: left;
+				margin-top: 0;
+				width: 6rem;
+				text-align: right;
+			}
+		
+			dd {
+				text-align: left;
+				margin: 0 0 0.5rem 0;
+				border-bottom: #666 1px dotted;
+				padding-left: 6rem;
+				overflow: visible;
+			}
+		}
+	}
+	
+	dfn img {
+		vertical-align: middle;
+	}
+		
+	.center {
+		text-align: center;
+	}	
+	
+	.zerofive {
+		padding-top: 0.5rem !important;
+		padding-top: 1rem !important;
+	}
+	
+	.bottom {
+		padding-bottom: 1rem !important;
+	}
+}

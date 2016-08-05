@@ -1,0 +1,141 @@
+h5 {
+  margin: 36px 0 !important;
+  background-color: #012052;
+  color: #fff !important;
+  font-size: 24px !important;
+  font-weight: normal;
+  padding: 24px !important;
+}
+
+#timeline {
+  width: 940px;
+  margin: 50px auto 0 auto;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  background: url("../img/past/dot.png") left 65px repeat-x;
+}
+#timeline a {
+  color: #5e9cff;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+#timeline a:hover, #timeline a.selected {
+  color: #2c7eff;
+}
+#timeline h6 {
+  float: left;
+  clear: both;
+  overflow: hidden;
+  color: #012052;
+  margin-left: 40px;
+  padding-top: 1.5rem;
+}
+#timeline #dates {
+  width: 12px;
+  height: 80px;
+  overflow: hidden;
+}
+#timeline #dates li {
+  list-style: none;
+  float: left;
+  width: 160px;
+  height: 70px;
+  font-size: 2rem;
+  text-align: center;
+  background: url("../img/past/biggerdot.png") center bottom no-repeat;
+}
+#timeline #dates li a {
+  line-height: 38px;
+  padding-bottom: 10px;
+  color: #023484;
+}
+#timeline #dates li a.selected {
+  font-size: 48px;
+  line-height: 54px;
+  color: #012052;
+}
+#timeline #issues {
+  width: 940px;
+  height: auto;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+#timeline #issues section {
+  width: 940px;
+  height: auto;
+  list-style: none;
+  float: left;
+  clear: none;
+  opacity: 1 !important;
+  padding: 0 !important;
+}
+#timeline #issues section p {
+  text-align: right;
+  clear: both;
+  margin: 0 40px 2em 40px;
+  padding: 12px 0 24px 0;
+  border-bottom: #999 1px dotted;
+}
+#timeline #issues section p.early {
+  clear: none;
+  text-align: left;
+  float: right;
+  width: 500px;
+  padding-top: 18px;
+}
+#timeline #issues section p a {
+  color: #012052;
+}
+#timeline #issues section dl {
+  margin: 0 40px 0 0 !important;
+  float: right;
+  width: 500px;
+  line-height: 36px;
+}
+#timeline #issues section dl dt {
+  float: left;
+  text-align: left;
+  padding: 0 !important;
+  border: none;
+  margin: 0 !important;
+}
+#timeline #issues section dl dd {
+  margin: 0 !important;
+  padding-top: 0 0 0 288px;
+  border-top: #666 1px dotted;
+  text-align: right;
+  overflow: visible;
+}
+#timeline .next,
+#timeline .prev {
+  position: absolute;
+  font-size: 70px;
+  top: 300px;
+  width: 22px;
+  height: 38px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#timeline .next:hover,
+#timeline .prev:hover {
+  background-position: 0 -76px;
+}
+#timeline .next {
+  right: 0;
+  background-image: url("../img/past/next.png");
+}
+#timeline .prev {
+  left: 0;
+  background-image: url("../img/past/prev.png");
+}
+#timeline .next.disabled,
+#timeline .prev.disabled {
+  opacity: 0.2;
+}

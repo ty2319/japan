@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/* CSS Document */
+article {
+  width: 100%;
+  clear: both;
+  position: relative;
+  background: url(../img/common/dot.png);
+}
+article #pan {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0.5rem;
+  width: 100%;
+  color: #fff;
+  background-color: rgba(1, 32, 82, 0.7);
+}
+article header#title {
+  text-align: center;
+  color: #fff !important;
+  padding: 10rem 0 2rem 0;
+  transform: translateY(50px);
+  opacity: 0;
+  text-shadow: 0.1rem 0.1rem 0.1rem #000;
+}
+article header#title.load {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 1s ease 0;
+  text-shadow: 3px rgba(0, 0, 0, 0.3);
+}
+article header#title h3 {
+  font-size: 2.5rem;
+  font-family: century;
+}
+article header#title h3 span {
+  display: block;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+article header#title p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+}
+article .half {
+  width: 50%;
+  min-width: 470px;
+  float: left;
+  clear: none;
+  border-color: gray;
+  border-style: dotted;
+  padding: 10rem 3% !important;
+}
+article .half h5, article .half dl, article .half ul, article .half p, article .half table {
+  margin: 1rem 0;
+}
+article .one_third {
+  width: 33.33333%;
+  min-width: 253.8px;
+  clear: none;
+  padding: 0 1.5% !important;
+  float: left;
+}
+article .one_third:nth-of-type(3n-1) {
+  border-left: gray dotted 1px;
+  border-right: gray dotted 1px;
+}
+article .one_third section {
+  padding-top: 0 !important;
+}
+article .one_third section h5 {
+  margin-top: 0 !important;
+}
+article .one_third p {
+  margin: 0 1rem 2rem 1rem;
+}
+article .one_third img {
+  width: 100%;
+  height: auto;
+}
+article .quarter {
+  width: 25%;
+  min-width: 211.5px;
+  float: left;
+  clear: none;
+  padding: 1rem !important;
+}
+article .quarter dl, article .quarter p {
+  margin-top: 1rem;
+}
+article .quarter img {
+  width: 100%;
+  height: auto;
+  min-width: 187.5px !important;
+}
+article div.contents, article .double {
+  padding: 0 !important;
+  width: 100% !important;
+}
+article div.contents h4, article .double h4 {
+  margin-top: 5rem;
+}
+article div.contents .half, article .double .half {
+  padding-top: 0 !important;
+}
+article div.contents h5, article .double h5 {
+  margin-top: 5rem;
+}
+article div.contents > img, article .double > img {
+  height: auto;
+  padding: 0 1.5% !important;
+  border: none;
+}
+article .double .one_third {
+  padding-bottom: 5rem !important;
+}
+article .double .one_third p {
+  overflow: hidden;
+  background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
+  line-height: 28px;
+}
+article section header, article div.contents header {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #012052;
+}
+article section header h4, article div.contents header h4 {
+  font-size: 2rem;
+  line-height: 100%;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+}
+article section header p, article div.contents header p {
+  font-family: century;
+  margin: 0.5rem 0 0 !important;
+}
+article .contents {
+  width: 100%;
+  clear: both;
+  background: center center no-repeat fixed;
+  overflow: hidden;
+  background-size: cover;
+  padding: 10rem 3%;
+}
+article .contents.bg0 {
+  background-image: url(../img/common/09.png);
+}
+article .contents.bg1 {
+  background-image: url(../img/common/10.png);
+}
+article .contents.bg2 {
+  background-image: url(../img/common/11.png);
+}
+article .contents.bg3 {
+  background-image: url(../img/common/12.png);
+}
+article .contents.bg4 {
+  background-image: url(../img/common/13.png);
+}
+article .contents.bg5 {
+  background-image: url(../img/common/14.png);
+}
+article .contents section {
+  padding: 5rem 0;
+  background: none;
+}
+article .contents > img:not(.one_third):not(.half) {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+article .contents .back_gray, article .contents .back_gray th, article .contents .back_gray td {
+  background-color: rgba(204, 204, 204, 0.8);
+}
+article .contents .back_white, article .contents .back_white th, article .contents .back_white td {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+article .contents hr {
+  border-top: #666 1px dotted;
+  margin: 24px 0 60px 0;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+article .contents figure {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+article .contents figure figcaption {
+  margin-top: 0.5rem;
+}
+article .contents h5, article .contents caption {
+  color: #012052;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+}
+article .contents dl, article .contents .frame, article .contents .box {
+  padding: 1rem;
+  border: #999 3px double;
+  overflow: hidden;
+  zoom: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0.5rem;
+}
+article .contents dt {
+  color: #012052;
+  font-weight: bold;
+  clear: both;
+  text-align: center;
+  margin-top: 2rem;
+}
+article .contents dt:first-child {
+  margin: 0;
+}
+article .contents dd {
+  overflow: hidden;
+  text-align: center;
+}
+article .contents dd a {
+  color: #2c7eff;
+}
+article .contents dd a span {
+  margin-right: 6px;
+}
+article .contents .box {
+  margin: 3rem 0 !important;
+}
+article .contents .box dt {
+  float: left;
+  margin-top: 0;
+  width: 6rem;
+  text-align: right;
+}
+article .contents .box dd {
+  text-align: left;
+  margin: 0 0 0.5rem 0;
+  border-bottom: #666 1px dotted;
+  padding-left: 6rem;
+  overflow: visible;
+}
+article dfn img {
+  vertical-align: middle;
+}
+article .center {
+  text-align: center;
+}
+article .zerofive {
+  padding-top: 0.5rem !important;
+  padding-top: 1rem !important;
+}
+article .bottom {
+  padding-bottom: 1rem !important;
+}

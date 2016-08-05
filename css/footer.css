@@ -1,0 +1,24 @@
+/* CSS Document */
+footer {
+  color: #fff;
+  font-size: 10.8px;
+  clear: both;
+}
+footer ul {
+  width: 100%;
+  min-width: 940px;
+  margin: 0 auto;
+  padding: 10px 10px 6px 10px;
+  background-color: #000;
+  display: table;
+}
+footer ul li {
+  display: table-cell;
+}
+footer ul li a {
+  color: #FFF;
+}
+footer ul li small {
+  display: block;
+  text-align: right;
+}

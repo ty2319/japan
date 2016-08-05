@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+.tail .half,.head .half {
+	padding : 0 $max*0.03 !important;
+	margin-left: -$max * 0.75;
+	min-width: $nf / 2;
+	overflow: hidden;
+	text-align: center;
+	
+	h5 {
+		margin: 0;
+	}
+	
+	div {
+		section {
+			padding: 0;
+			float: left;
+			
+			p {
+				margin: 0;
+			}
+		}
+	}
+	
+	ul {
+		clear: both;
+	
+		.prev {
+			float: left;
+			margin-left: -2rem;
+			display: none;
+			margin-top: -25rem;
+		}
+		
+		.next {
+			float: right;
+			margin-right: -2rem;
+			margin-top: -25rem;
+		}
+		
+		a {
+			color: $navy;
+			
+			&:hover {
+				color: lighten($navy,30%);
+			}
+		}
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border: lighten($black,70%) solid 1px;
+	width: $max;
+	
+	&.quarter {
+		min-width: 235.04px;
+	}
+	
+	caption span {
+		font-size: 1.25rem;
+	}
+	
+	thead th {
+		background-color: lighten($modal,30%);
+		color: $white;
+	}
+
+	th,td {
+		border-right: lighten($black,70%) dotted 1px;
+		padding: $FS*0.7 $FS*0.5;
+		text-align: center;
+		width: auto;
+	}
+	
+	&.battery {
+		border: none;
+		width: auto;
+		border-collapse: separate;
+		border-spacing: 0 $FS/2;
+		margin-bottom: $FS * 5 !important;
+		
+		th,td {
+			border: none;
+			text-align: left;
+			padding: $FS*0.4;
+			line-height: $max;
+		}
+		
+		.b_n {
+			background-color: $modal3;
+			color: $white;
+		}
+		
+		.b_e {			
+			background-color: lighten($modal,30%);
+			color: $white;
+		}
+	}
+	
+	&.score thead th {
+		background-color: $modal4;
+	}
+	
+	.current {
+		background-color: lighten($modal,10%) !important;
+		font-weight: bold;
+		
+		a {
+			color: $white;
+		}
+	}
+	
+	&.blue {
+		
+		caption {
+			color: $blue !important;
+		}
+		
+		thead th {
+			background-color: $modal3;
+		}
+	}
+
+	&.border {
+		caption {
+			color: lighten($black,40%) !important;
+		}
+	}
+	
+	.back_blue th,.back_blue td {
+		background-color: lighten($modal3,35%);
+	}			
+}
+
+.ntt thead th {
+	background-color: $modal3;
+	color: #FFF;
+}
+
+.enemy thead th {
+	background-color: lighten($modal,30%);
+	color: #FFF;
+}

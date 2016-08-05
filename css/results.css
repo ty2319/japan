@@ -1,0 +1,113 @@
+/* CSS Document */
+.tail .half, .head .half {
+  padding: 0 3% !important;
+  margin-left: -75%;
+  min-width: 470px;
+  overflow: hidden;
+  text-align: center;
+}
+.tail .half h5, .head .half h5 {
+  margin: 0;
+}
+.tail .half div section, .head .half div section {
+  padding: 0;
+  float: left;
+}
+.tail .half div section p, .head .half div section p {
+  margin: 0;
+}
+.tail .half ul, .head .half ul {
+  clear: both;
+}
+.tail .half ul .prev, .head .half ul .prev {
+  float: left;
+  margin-left: -2rem;
+  display: none;
+  margin-top: -25rem;
+}
+.tail .half ul .next, .head .half ul .next {
+  float: right;
+  margin-right: -2rem;
+  margin-top: -25rem;
+}
+.tail .half ul a, .head .half ul a {
+  color: #012052;
+}
+.tail .half ul a:hover, .head .half ul a:hover {
+  color: #035be9;
+}
+
+table {
+  border-collapse: collapse;
+  border: #b3b3b3 solid 1px;
+  width: 100%;
+}
+table.quarter {
+  min-width: 235.04px;
+}
+table caption span {
+  font-size: 1.25rem;
+}
+table thead th {
+  background-color: rgba(77, 77, 77, 0.8);
+  color: #fff;
+}
+table th, table td {
+  border-right: #b3b3b3 dotted 1px;
+  padding: 8.4px 6px;
+  text-align: center;
+  width: auto;
+}
+table.battery {
+  border: none;
+  width: auto;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  margin-bottom: 60px !important;
+}
+table.battery th, table.battery td {
+  border: none;
+  text-align: left;
+  padding: 4.8px;
+  line-height: 100%;
+}
+table.battery .b_n {
+  background-color: rgba(44, 126, 255, 0.8);
+  color: #fff;
+}
+table.battery .b_e {
+  background-color: rgba(77, 77, 77, 0.8);
+  color: #fff;
+}
+table.score thead th {
+  background-color: rgba(1, 32, 82, 0.7);
+}
+table .current {
+  background-color: rgba(26, 26, 26, 0.8) !important;
+  font-weight: bold;
+}
+table .current a {
+  color: #fff;
+}
+table.blue caption {
+  color: #2c7eff !important;
+}
+table.blue thead th {
+  background-color: rgba(44, 126, 255, 0.8);
+}
+table.border caption {
+  color: #666666 !important;
+}
+table .back_blue th, table .back_blue td {
+  background-color: rgba(223, 235, 255, 0.8);
+}
+
+.ntt thead th {
+  background-color: rgba(44, 126, 255, 0.8);
+  color: #FFF;
+}
+
+.enemy thead th {
+  background-color: rgba(77, 77, 77, 0.8);
+  color: #FFF;
+}

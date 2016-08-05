@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+html {
+	font-size: 16px;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	color: lighten($black, 20%);
+	min-width: $nf;
+	background-color: $black;
+	
+	body {
+		background: center top no-repeat fixed;
+		background-size: cover;
+		line-height: 1.75rem;
+	
+		@include media($nf) {
+			font-size: 0.75rem;
+		}
+		
+		@include media($of) {
+			font-size: 0.875rem;
+		}
+		
+		&.bg0 {
+			background-image: url(#{$ip}common/01.jpg);
+		}
+		
+		&.bg1 {
+			background-image: url(#{$ip}common/02.jpg);
+		}
+		
+		&.bg2 {
+			background-image: url(#{$ip}common/03.jpg);
+		}
+		
+		&.bg3 {
+			background-image: url(#{$ip}common/04.jpg);
+		}
+		
+		&.bg4 {
+			background-image: url(#{$ip}common/05.jpg);
+		}
+		
+		&.bg5 {
+			background-image: url(#{$ip}common/06.jpg);
+		}
+		
+		&.bg6 {
+			background-image: url(#{$ip}common/07.jpg);
+		}
+		
+		&.bg7 {
+			background-image: url(#{$ip}common/08.jpg);
+		}
+		
+		&[class*=bg] {
+			background-position: center -300px;
+			transition: background-position 40s ease 1s;
+		}
+
+		a {
+			color: #0033cc;
+			text-decoration: none;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	
+		img {
+			border: none;
+			line-height: 0;
+			vertical-align: bottom;
+		}
+	
+		#pagetop {
+			@include fixB(-50px,55px,1);
+			
+			a {
+				display: block;
+				width: 50px;
+				height: 50px;
+				background-color: rgba(1,32,82,0.7);
+				border-radius: 50px;
+				text-align: center;
+				color: #fff;
+				font-size: 24px;
+				line-height: 50px;
+			}
+		}
+		
+		#modal {
+			@include fixT(0,0,5);
+			width: $max;
+			height: $max;
+			background-color: $modal;
+		}
+		
+		#close {
+			@include fixT(50%,50%,6);
+			margin: -250px 0 0 360px;
+			font-size: 4rem;
+			display: none;
+			color: $white;
+			cursor: pointer;
+			font-weight: lighter;
+		}
+		
+		#hero {
+			@include fixB(75%,20px,1);
+			width: 160px;
+			height: 160px;
+		}
+	}
+}

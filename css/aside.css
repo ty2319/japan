@@ -1,0 +1,74 @@
+/* CSS Document */
+aside h3, aside dl {
+  position: fixed;
+  top: 55%;
+  left: 0;
+}
+
+aside {
+  position: relative;
+  clear: both;
+}
+aside h3 {
+  z-index: 4;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgba(26, 26, 26, 0.8);
+  margin-left: 12px;
+  padding: 6px 0;
+  font-family: century;
+  font-size: 15px;
+  width: 60px;
+  text-align: center;
+  left: 22%;
+}
+aside h3 i {
+  display: block !important;
+  font-size: 30px !important;
+  color: #fff;
+  margin-left: 0.4rem;
+}
+aside dl {
+  z-index: 4;
+  width: 100%;
+  height: 18rem;
+  margin: -7rem 0 0 0;
+  padding: 1.25rem 0;
+  display: none;
+  background-color: #000;
+  height: 14rem;
+}
+aside dl dt {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem 2rem;
+  color: #fff;
+}
+aside dl dt span {
+  font-size: 0.9rem;
+  -webkit-transform: scale(0.9);
+  margin-left: 1rem;
+  font-family: century;
+}
+aside dl dd {
+  color: #666666;
+  line-height: 100%;
+  margin-bottom: 1rem;
+  color: #666666;
+}
+aside dl dd span {
+  margin: 3px 1rem 0 3rem;
+}
+aside dl dd a {
+  color: #fff;
+}
+aside dl dd a.active {
+  color: #2c7eff;
+  text-decoration: line-through;
+}
+aside dl dd a:hover {
+  color: #92bcff;
+}
+aside dl dd a:hover {
+  color: #cccccc !important;
+}

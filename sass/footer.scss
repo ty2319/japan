@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+footer {
+	color: $white;
+	font-size: $FS * 0.9;
+	clear: both;
+
+	ul {
+		width: $max;
+		min-width: $nf;
+		margin: 0 auto;
+		padding: 10px 10px $FS/2 10px;
+		background-color: $black;
+		display: table;
+		
+		li {
+			display: table-cell;
+			
+			a {
+				color: #FFF;
+			}
+				
+			small {
+				display: block;
+				text-align: right;
+			}
+		}
+	}
+}

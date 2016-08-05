@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/* CSS Document */
+html body {
+  overflow-x: hidden;
+}
+html body[class*=bg] {
+  background: none;
+}
+html body header#top {
+  position: relative;
+  z-index: 2;
+}
+html body #back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+html body #back div {
+  background: url(../img/top/4.jpg), url(../img/top/0.jpg), url(../img/top/1.jpg), url(../img/top/2.jpg), url(../img/top/3.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+html body #back div.inner {
+  transform: scale(1.5, 1.5) rotate(12deg);
+  transition: all 30s ease 0.5s;
+}
+html body main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url(../img/common/dot.png);
+}
+html body main > div {
+  position: absolute;
+  background-color: #000;
+}
+html body main article {
+  background: none;
+  height: 100%;
+  border-right: 5% black solid;
+  overflow-y: auto;
+}
+html body main article #button {
+  position: absolute;
+  top: 54%;
+  left: 0;
+  z-index: 10;
+  font-family: century;
+}
+html body main article #button li {
+  background-color: #012052;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  min-width: 60px;
+  min-height: 60px;
+  margin-bottom: 1px;
+  padding-top: 35%;
+  opacity: .8;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+html body main article #button li.on {
+  background-color: #000;
+}
+html body main article section {
+  color: #fff;
+  display: none;
+  padding: 0 !important;
+  background: none !important;
+  overflow: auto;
+  height: 100%;
+  line-height: 1.75rem;
+}
+html body main article section header {
+  position: absolute;
+  top: 45%;
+  left: 27%;
+  z-index: 3;
+  width: 10% !important;
+  color: #fff;
+  margin: 0;
+}
+html body main article section header:after {
+  content: "";
+}
+html body main article section header h3 {
+  font-family: century;
+  font-size: 1.25rem;
+}
+html body main article section header p {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+  font-size: 0.9rem;
+}
+html body main article section div.tse-scrollable {
+  position: absolute;
+  top: 55.5%;
+  left: 8.1%;
+  z-index: 10;
+  width: 18%;
+  overflow: hidden;
+}
+@media all and (max-width: 1200px) {
+  html body main article section div.tse-scrollable {
+    width: 220px !important;
+  }
+}
+html body main article section div.tse-scrollable .close {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+html body main article section div.tse-scrollable p a, html body main article section div.tse-scrollable li a {
+  color: #333333;
+  background-color: #fff;
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  opacity: 0.8;
+  overflow: hidden;
+}
+html body main article section div.tse-scrollable p a:hover, html body main article section div.tse-scrollable li a:hover {
+  opacity: 1;
+}
+html body main article section div.tse-scrollable dl {
+  background: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body main article section div.tse-scrollable dl dt {
+  color: #fff !important;
+}
+html body main article section div.tse-scrollable dl dd {
+  margin: 0 0 1rem 0;
+  padding: 0 0 1rem 0;
+  border-bottom: #fff 1px dotted;
+}
+html body main article section div.tse-scrollable dl dd:last-of-type {
+  border: none;
+}
+html body #news {
+  position: absolute;
+  top: 5.4rem;
+  left: 65%;
+  z-index: 5;
+  width: 45.5%;
+  background: none !important;
+  line-height: 100%;
+}
+@media all and (max-width: 1500px) {
+  html body #news {
+    position: absolute;
+    top: 11rem;
+    left: 1rem;
+    z-index: 3;
+    width: 1500px !important;
+  }
+}
+html body #news h3 {
+  width: 10%;
+  padding: 0.2rem 0.5rem;
+  background-color: #fff;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  font-family: century;
+  display: inline-block;
+  vertical-align: top;
+}
+@media all and (max-width: 1500px) {
+  html body #news h3 {
+    width: 5%;
+    padding: 0.4rem 0.5rem 0 0.5rem;
+    min-width: 4rem;
+    height: 1.6rem;
+  }
+}
+html body #news #prev, html body #news #next {
+  display: inline-block;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+}
+@media all and (max-width: 1500px) {
+  html body #news #prev, html body #news #next {
+    font-size: 1.25rem;
+  }
+}
+html body #news #prev {
+  display: none;
+}
+html body #news div {
+  width: 100%;
+  background: none !important;
+  padding: 0;
+}
+html body #news div h3 {
+  width: 10%;
+  padding: 0.2rem 0;
+  background-color: #fff;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  font-family: century;
+  display: inline-block;
+  vertical-align: top;
+}
+@media all and (max-width: 1500px) {
+  html body #news div h3 {
+    width: 5%;
+  }
+}
+html body #news div ul {
+  margin-top: 0.5rem;
+  display: table;
+}
+html body #news div ul li {
+  display: table-cell;
+  color: #fff;
+}
+html body #news div ul li a {
+  color: #fff;
+  margin: 0 0.5rem 0 0;
+  padding: 0;
+  text-decoration: underline;
+}
+html body footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+}
+html #live {
+  display: none;
+}
+html #pv {
+  position: absolute;
+  top: 165px;
+  right: 1%;
+  z-index: 4;
+  display: block;
+  cursor: pointer;
+  width: 16.66667%;
+  min-width: 250px;
+  height: auto;
+}
+html iframe {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
+  width: 640px;
+  height: 360px;
+  margin: -180px 0 0 -320px;
+}
+html #vs {
+  position: fixed;
+  bottom: 10%;
+  right: 0.5%;
+  z-index: 4;
+  display: block;
+  transform: rotate(12deg);
+  width: 22%;
+  min-width: 300px;
+  height: auto;
+}
+html #exam {
+  position: fixed;
+  bottom: 0;
+  right: 200px;
+  z-index: 11;
+  margin-bottom: 0.8rem;
+}
+html #hero {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  z-index: 1;
+  margin-left: -80px;
+}

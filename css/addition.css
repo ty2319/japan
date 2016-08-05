@@ -1,0 +1,48 @@
+/* CSS Document */
+article > div.contents {
+  position: relative;
+  padding: 3% !important;
+}
+article > div.contents > section.half {
+  background-color: #fff !important;
+  position: absolute;
+  top: 6%;
+  left: 100%;
+  z-index: 1;
+  width: 47%;
+  overflow: auto;
+  padding: 0 3% !important;
+}
+article > div.contents > section.half:first-of-type {
+  left: 3%;
+}
+article > div.contents > section.half header {
+  margin-bottom: 0;
+}
+article > div.contents > section.half header h4 {
+  margin-top: 3rem;
+}
+article > div.contents > img.half {
+  margin-left: 50%;
+  padding: 0 !important;
+}
+article ul {
+  position: absolute;
+  bottom: 5.5%;
+  right: 50%;
+  z-index: 2;
+  display: table;
+  background-color: black;
+  text-align: center;
+  margin-right: -5rem;
+}
+article ul li {
+  display: table-cell;
+  padding: 1rem;
+}
+article ul li a {
+  color: #fff;
+}
+article ul li a.show {
+  color: #2c7eff;
+}
