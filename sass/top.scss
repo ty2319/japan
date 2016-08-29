@@ -6,7 +6,7 @@
 html {
 	
 	body {
-		overflow-x: hidden;
+		overflow: hidden;
 		
 		&[class*=bg] {
 			background: none;
@@ -17,121 +17,112 @@ html {
 			z-index: 2;
 		}
 		
-		#back {
-			@include abT(0,0,1);
-			overflow: hidden;
-			
-			div {
-				background: url(#{$ip}top/4.jpg), url(#{$ip}top/0.jpg), url(#{$ip}top/1.jpg), url(#{$ip}top/2.jpg), url(#{$ip}top/3.jpg) no-repeat center center;
-				background-size: cover;
-				width: $max;
-				height: $max;
-				
-				&.inner {
-					transform: scale(1.5 , 1.5) rotate(12deg);
-					transition: all 30s ease 0.5s;
-				}
-			}
-		}
-		
 			
 		main {
-			@include abT(0,0,1);
-			background: url(#{$ip}common/dot.png);
+			width: $max;
 			
-			&>div {
-				position:absolute;
-				background-color: $black;
+			& > span {
+				@include fixLB(4.5rem,0,0);
+				display: block;
+				color: darken($blue , 30%);
+				font-size: 2rem;
+				width: $max / 4;
+				text-align: center;
 			}
 			
 			article {
 				background: none;
-				height: $max;
-				border-right: $max*0.05 rgba($black,80%) solid;
-				overflow-y: auto;
+				width: $max;
 			
-				#button {
-					@include abT(54%,0,10);
-					font-family: century;
-				
+				& > ul {
+					@include fixLB(2.5rem,0,1);
+					display: table;
+					width: $max;
+					background-color: $navy;
+					
 					li {
-						background-color: $navy;
-						color: $white;
+						display: table-cell;
 						text-align: center;
+						padding: 0.5rem;
+						color: $white;
+						width: $max / 4;
 						cursor: pointer;
-						min-width: 60px;
-						min-height: 60px;
-						margin-bottom: 1px;
-						padding-top: $max * 0.35;
-						opacity: .8;
-						font-size: 0.9rem;
-						font-weight: bold;
 						
-						&.on {
-							background-color: $black;
+						&:hover {
+							background-color: darken($blue , 20%);
+						}
+						
+						&.active {
+							background-color: darken($blue , 30%);
 						}
 					}
 				}
 				
 				section {
 					color: $white;
-					display: none;
 					padding: 0 !important;
-					background: none !important;
-					overflow: auto;
-					height: $max;
-					line-height: 1.75rem;
+					width: $max * 1.5;
+					margin-left: -$max / 4;
+					background-position: center center;
+					background-size: cover;
+					transition: width 20s ease , margin-left 20s ease;
 					
-					header {
-						@include abT(45%,27%,3);
-						width: $max * 0.1 !important;
-						color: #fff;
-						margin: 0;
+					&:nth-of-type(2n) {
+						background-color: $blue;
+					}
 						
-						&:after {
-							content: "";
-						}
+					@for $value from 1 to 5 {
 						
-						h3 {
-							font-family: century;
-							font-size: 1.25rem;
-						}
-					
-						p {
-							font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-							font-size: 0.9rem;
+						&:nth-of-type(#{$value}) {
+							background-image: url(#{$ip}top/#{$value}.jpg);
 						}
 					}
+						
+					&.load {
+						width: $max;
+						margin-left: 0;
+					}
 					
-					div.tse-scrollable {
-						@include abT(55.5%,8.1%,10);
-						width: $max * 0.18;
-						overflow: hidden;
-						
-						@include media($ot) {
-							width: 220px !important;
-						}
-										
-						.close {
-							font-size: 2.5rem;
+					div {
+						margin: 20rem auto 0 auto;
+						padding: 0 2rem 5rem 2rem;
+						text-align: center;
+						text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
+					
+						header {
 							color: #fff;
-							cursor: pointer;
-							text-align: right;
-							margin-bottom: 1rem;
+							margin: 0 0 3rem 0;
+							
+							h3 {
+								font-family: century;
+								font-size: 2rem;
+							}
+						
+							p {
+								font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+								font-size: 0.9rem;
+							}
 						}
 						
-						p a,li a {
+						a button {
 							color: lighten($black,20%);
 							background-color: $white;
 							display: block;
-							margin-top: 1rem;
-							padding: 0.5rem;
+							margin: 1rem 0 0 $max/4;
+							padding: 1rem;
 							text-align: center;
 							opacity: 0.8;
 							overflow: hidden;
+							width: $max / 2;
+							cursor: pointer;
+							border: none;
 							
 							&:hover {
 								opacity: 1;
+							}
+							
+							span {
+								margin-right: 1rem;
 							}
 						}
 						
@@ -161,45 +152,35 @@ html {
 		}
 		
 		#news {
-			@include abT(5.4rem,65%,5);
-			width: $max * 0.455;
+			@include abT(5.5rem,30%,1);
+			width: $max * 0.7;
 			background: none !important;
 			line-height: $max;
+			display: table;
+			overflow: hidden !important;
 			
-			@include media($of) {
-				@include abT(11rem,1rem,3);
-				width: 1500px !important;
+			@include media($ot) {
+				display: none;
 			}
 			
 			h3 {
-				width: $max * 0.1;
-				padding: 0.2rem 0.5rem;
+				padding: 0.2rem 1rem;
 				background-color: $white;
 				color: lighten($black, 20%);
 				font-weight: bold;
 				text-align: center;
 				font-family: century;
-				display: inline-block;
+				display: table-cell;
 				vertical-align: top;
-			
-				@include media($of) {
-					width: $max * 0.05;
-					padding: 0.4rem 0.5rem 0 0.5rem;
-					min-width: 4rem;
-					height: 1.6rem;
-				}
 			}
 				
 			#prev,#next {
-				display: inline-block;
-				margin-left: 1rem;
+				display: table-cell;
+				padding-left: 1rem;
 				cursor: pointer;
 				color: $white;
 				font-size: 1.5rem;
-			
-				@include media($of) {
-					font-size: 1.25rem;
-				}
+				width: 1rem;
 			}
 			
 			#prev {
@@ -207,28 +188,14 @@ html {
 			}
 			
 			div {
-				width: $max;
+				display: table-cell;
 				background: none !important;
 				padding: 0;
-				
-				h3 {
-					width: $max * 0.1;
-					padding: 0.2rem 0;
-					background-color: $white;
-					color: lighten($black, 20%);
-					font-weight: bold;
-					text-align: center;
-					font-family: century;
-					display: inline-block;
-					vertical-align: top;
-				
-					@include media($of) {
-						width: $max * 0.05;
-					}
-				}
+				text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
 				
 				ul {
 					margin-top: 0.5rem;
+					padding-left: 1rem;
 					display: table;
 						
 					li {
@@ -250,10 +217,6 @@ html {
 			@include fixB(0,0,10);
 			width: $max;
 		}
-	}
-	
-	#live {
-		display: none;
 	}
 	
 	#pv {

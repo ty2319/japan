@@ -55,7 +55,7 @@ $modal3: rgba(#2c7eff,0.8);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#222c7eff,EndColorStr=#222c7eff)";
 }
 
-$modal4: rgba(#012052,0.7);
+$modal4: rgba(#012052,0.9);
 
 @mixin Modal4 {
 	background-color: $modal3;
@@ -101,6 +101,13 @@ $modal4: rgba(#012052,0.7);
 	position: fixed;
 	bottom: $bottom;
 	right: $right;
+	z-index: $z;
+}
+
+@mixin fixLB($bottom,$left,$z) {
+	position: fixed;
+	bottom: $bottom;
+	left: $left;
 	z-index: $z;
 }
 

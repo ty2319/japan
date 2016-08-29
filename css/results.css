@@ -80,7 +80,7 @@ table.battery .b_e {
   color: #fff;
 }
 table.score thead th {
-  background-color: rgba(1, 32, 82, 0.7);
+  background-color: rgba(1, 32, 82, 0.9);
 }
 table .current {
   background-color: rgba(26, 26, 26, 0.8) !important;
