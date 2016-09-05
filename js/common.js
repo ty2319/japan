@@ -42,6 +42,8 @@
 		
 		$('article').children('section:not(.half,.one_third,.quarter),div').addClass('contents');
 		
+		$('header#title').append('<p id="scroll">scroll<span class="fa fa-angle-down fa-2x"></span></p>');
+		
 		$('.contents:odd').css('background-color','#e9f2ff');
 		$('.contents:even').css('background-color','#FFFFFF');
 		
@@ -161,11 +163,17 @@
 	
 	//title
 	title = function() {
+			
+		var ct	= $('.contents:first').offset().top;
+		var A	= Math.floor(8*Math.random());
 		
-		var A = Math.floor(8*Math.random());
 		$('body').addClass('bg'+A);
 		
 		$('header#title').addClass('load');
+		
+		$('header#title #scroll').on('click' , function() {
+			$("html, body").stop(true).animate({scrollTop: ct}, 500, "swing");
+		});
 
 	},
 	
@@ -199,8 +207,7 @@
 		//スクロールした時の処理
 		$(window).scroll(function(){
 			
-			var scrollPosition	= $(window).scrollTop();	
-			var ct				= $('.contents:first').offset().top;		
+			var scrollPosition	= $(window).scrollTop();		
 				
 			for (var i = boxTop.length - 1 ; i >= 0; i--) {
 				if (scrollPosition >= boxTop[i] - set) {
@@ -219,12 +226,6 @@
 				$('#global').addClass('fix');
 			} else {
 				$('#global').removeClass('fix');
-			}
-			
-			if (scrollPosition < ct && scrollPosition > startPosition) {
-				$("html, body").stop(true).animate({scrollTop: ct}, 80, "swing");
-			} else if (scrollPosition < ct && scrollPosition < startPosition) {
-				$("html, body").stop(true).animate({scrollTop: 0}, 80, "swing");
 			}
 					
 			if (scrollPosition >= $(document).height() - $(window).height() - $('footer ul').height()) {
