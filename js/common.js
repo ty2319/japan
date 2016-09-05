@@ -127,7 +127,7 @@
 			
 		$('.menu-trigger:not(.on)').hover(function() {
 			$('#global > dl > dd').slideDown(500).css('display' , 'table-cell');
-			$('#global dd dd').css('display' , 'block');
+			$('#global > dl > dd > dl').slideDown(500);
 			$(this).addClass('on');
 			$('i' , this).text('close');
 			$('#global').nextAll().addClass('menu_open');
@@ -138,6 +138,7 @@
 				$('.menu-trigger i').text('close');
 			} , function() {
 				$('#global > dl > dd').slideUp(500);
+				$('#global > dl > dd > dl').slideUp(500);
 				$('#global .on').removeClass('on');
 				$('#global').nextAll().removeClass('menu_open');
 				$('.menu-trigger i').text('menu');
@@ -146,6 +147,7 @@
 		
 		$('.menu-trigger').on('click' , function() {
 			$('#global > dl > dd').slideToggle(500).css('display' , 'table-cell');
+			$('#global > dl > dd > dl').slideToggle(500)
 			$(this).toggleClass('on');
 			$('#global').nextAll().toggleClass('menu_open');
 			
@@ -197,7 +199,8 @@
 		//スクロールした時の処理
 		$(window).scroll(function(){
 			
-			var scrollPosition = $(window).scrollTop();			
+			var scrollPosition	= $(window).scrollTop();	
+			var ct				= $('.contents:first').offset().top;		
 				
 			for (var i = boxTop.length - 1 ; i >= 0; i--) {
 				if (scrollPosition >= boxTop[i] - set) {
@@ -212,10 +215,16 @@
 				}
 			};
 			
-			if (navtop <= scrollPosition) {
+			if (navtop < scrollPosition) {
 				$('#global').addClass('fix');
 			} else {
 				$('#global').removeClass('fix');
+			}
+			
+			if (scrollPosition < ct && scrollPosition > startPosition) {
+				$("html, body").stop(true).animate({scrollTop: ct}, 80, "swing");
+			} else if (scrollPosition < ct && scrollPosition < startPosition) {
+				$("html, body").stop(true).animate({scrollTop: 0}, 80, "swing");
 			}
 					
 			if (scrollPosition >= $(document).height() - $(window).height() - $('footer ul').height()) {

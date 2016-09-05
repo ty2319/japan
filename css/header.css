@@ -94,7 +94,6 @@ h2 {
   font-style: normal;
 }
 #global > dl > dd {
-  display: table-cell;
   padding: 5rem 0.5rem;
   display: none;
   background-color: rgba(0, 0, 0, 0.8);
@@ -116,6 +115,7 @@ h2 {
 }
 #global > dl > dd dl {
   margin: 0 auto;
+  display: none;
 }
 #global > dl > dd dl dt {
   font-weight: bold;

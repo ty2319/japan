@@ -100,7 +100,6 @@ h2 {
 		}
 		
 		& > dd {
-			display: table-cell;
 			padding: 5rem 0.5rem;
 			display: none;
 			background-color: $modal;
@@ -130,6 +129,7 @@ h2 {
 			
 			dl {
 				margin: 0 auto;
+				display: none;
 				
 				dt {
 					font-weight: bold;
