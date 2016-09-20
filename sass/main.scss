@@ -176,33 +176,16 @@ article {
 	.contents {
 		width: $max;
 		clear: both;
-		background: center center no-repeat fixed;
+		background: center top no-repeat fixed;
 		overflow: hidden;
 		background-size: cover;
 		padding: 8rem $max*0.03;
 		
-		&.bg0 {
-			background-image: url(#{$ip}common/09.png);
-		}
-		
-		&.bg1 {
-			background-image: url(#{$ip}common/10.png);
-		}
-		
-		&.bg2 {
-			background-image: url(#{$ip}common/11.png);
-		}
-		
-		&.bg3 {
-			background-image: url(#{$ip}common/12.png);
-		}
+		@for $value from 0 through 5 {
 			
-		&.bg4 {
-			background-image: url(#{$ip}common/13.png);
-		}
-		
-		&.bg5 {
-			background-image: url(#{$ip}common/14.png);
+			&.bg#{$value} {
+				background-image: url(#{$ip}common/#{$value + 10}.png);
+			}
 		}
 		
 		section {

@@ -54,6 +54,12 @@ html body.bg6 {
 html body.bg7 {
   background-image: url(../img/common/08.jpg);
 }
+html body.bg8 {
+  background-image: url(../img/common/09.jpg);
+}
+html body.bg9 {
+  background-image: url(../img/common/010.jpg);
+}
 html body[class*=bg] {
   background-position: center -300px;
   transition: background-position 40s ease 1s;

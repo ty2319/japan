@@ -31,7 +31,7 @@
 				<dt>トピックス <i>Topics</i></dt>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/mascot.html"><span class="fa fa-pencil-square-o"></span>マスコットの会場リポート<i>The mascot's game report</i></a></dd>
 				<!--<dd><a href="/symbol/hp/baseball/games/2016/japan/hero.html"><span class="fa fa-microphone"></span>ヒーローインタビュー<i>Hero Interview</i></a></dd>-->
-				<dd><a href="/symbol/hp/baseball/games/2016/japan/history.html"><span class="fa fa-trophy"></span>都市対抗野球とNTTグループの歴史<i>History</i></a></dd>
+				<dd><a href="/symbol/hp/baseball/games/2016/japan/history.html"><span class="fa fa-trophy"></span>日本選手権とNTTグループの歴史<i>History</i></a></dd>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/past.html"><span class="fa fa-book"></span>NTT西日本 過去の戦績<i>The past results</i></a></dd>
 			</dl>
 		</dd>

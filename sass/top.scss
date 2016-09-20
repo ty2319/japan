@@ -24,7 +24,7 @@ html {
 			& > span {
 				@include fixLB(4.5rem,0,0);
 				display: block;
-				color: darken($blue , 30%);
+				color: $white;
 				font-size: 2rem;
 				width: $max / 4;
 				text-align: center;
@@ -53,23 +53,19 @@ html {
 						}
 						
 						&.active {
-							background-color: darken($blue , 30%);
+							background-color: $white;
+							color: $navy;
 						}
 					}
 				}
 				
-				section {
+				.contents {
 					color: $white;
 					padding: 0 !important;
 					width: $max * 1.5;
 					margin-left: -$max / 4;
-					background-position: center center;
+					background: center center no-repeat scroll;
 					background-size: cover;
-					transition: width 20s ease , margin-left 20s ease;
-					
-					&:nth-of-type(2n) {
-						background-color: $blue;
-					}
 						
 					@for $value from 1 to 5 {
 						
@@ -77,15 +73,20 @@ html {
 							background-image: url(#{$ip}top/#{$value}.jpg);
 						}
 					}
+					
+					&:first-of-type {
+						border: none !important;
+					}
 						
 					&.load {
 						width: $max;
 						margin-left: 0;
+						transition: width 20s ease , margin-left 20s ease;
 					}
 					
 					div {
-						margin: 20rem auto 0 auto;
-						padding: 0 2rem 5rem 2rem;
+						margin: 0 auto;
+						padding: 20rem 2rem 5rem 2rem;
 						text-align: center;
 						text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
 					
@@ -127,19 +128,27 @@ html {
 						}
 						
 						dl {
-							background: none !important;
-							border: none !important;
-							margin: 0 !important;
-							padding: 0 !important;
+							background: none;
+							width: 30rem;
+							border: none;
+							margin: 0 auto;
+							padding: 0;
 							
 							dt {
-								color: $white !important;
+								color: $white;
+								float: left;
+								width: 8rem;
+								margin: 0;
+								padding: 0 1rem;
+								text-align: right;
 							}
 							
 							dd {
 								margin: 0 0 1rem 0;
 								padding: 0 0 1rem 0;
 								border-bottom: $white 1px dotted;
+								text-align: left;
+								overflow: visible;
 								
 								&:last-of-type {
 									border: none;
@@ -172,6 +181,8 @@ html {
 				font-family: century;
 				display: table-cell;
 				vertical-align: top;
+				position: $r;
+				z-index: 2;
 			}
 				
 			#prev,#next {

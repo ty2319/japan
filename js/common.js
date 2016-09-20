@@ -46,6 +46,7 @@
 		
 		$('.contents:odd').css('background-color','#e9f2ff');
 		$('.contents:even').css('background-color','#FFFFFF');
+		$('.contents:eq(0)').css('border-top' , '#012052 7px solid');
 		
 		$('.contents').each(function() {
 			var A = Math.floor(6*Math.random());
@@ -111,20 +112,20 @@
 		if(path.match("access")){
 			$('nav#global a').eq(5).addClass('active');
 	　　}
-		if(path.match("addition")){
+		/*if(path.match("addition")){
 			$('nav#global a').eq(6).addClass('active');
-	　　}
+		}*/
 		if(path.match("mascot")){
-			$('nav#global a').eq(7).addClass('active');
+			$('nav#global a').eq(6).addClass('active');
 	　　}
 		/*if(path.match("hero")){
 			$('nav#global a').eq(12).addClass('active');
 	　　}*/
 		if(path.match("history")){
-			$('nav#global a').eq(8).addClass('active');
+			$('nav#global a').eq(7).addClass('active');
 	　　}
 		if(path.match("past")){
-			$('nav#global a').eq(9).addClass('active');
+			$('nav#global a').eq(8).addClass('active');
 	　　}
 			
 		$('.menu-trigger:not(.on)').hover(function() {
@@ -164,8 +165,8 @@
 	//title
 	title = function() {
 			
-		var ct	= $('.contents:first').offset().top;
-		var A	= Math.floor(8*Math.random());
+		var ct	= $('.contents:first').offset().top + 7;
+		var A	= Math.floor(9*Math.random());
 		
 		$('body').addClass('bg'+A);
 		

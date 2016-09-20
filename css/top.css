@@ -19,7 +19,7 @@ html body main > span {
   left: 0;
   z-index: 0;
   display: block;
-  color: #003992;
+  color: #fff;
   font-size: 2rem;
   width: 25%;
   text-align: center;
@@ -49,55 +49,56 @@ html body main article > ul li:hover {
   background-color: #004dc5;
 }
 html body main article > ul li.active {
-  background-color: #003992;
+  background-color: #fff;
+  color: #012052;
 }
-html body main article section {
+html body main article .contents {
   color: #fff;
   padding: 0 !important;
   width: 150%;
   margin-left: -25%;
-  background-position: center center;
+  background: center center no-repeat scroll;
   background-size: cover;
-  transition: width 20s ease , margin-left 20s ease;
 }
-html body main article section:nth-of-type(2n) {
-  background-color: #2c7eff;
-}
-html body main article section:nth-of-type(1) {
+html body main article .contents:nth-of-type(1) {
   background-image: url(../img/top/1.jpg);
 }
-html body main article section:nth-of-type(2) {
+html body main article .contents:nth-of-type(2) {
   background-image: url(../img/top/2.jpg);
 }
-html body main article section:nth-of-type(3) {
+html body main article .contents:nth-of-type(3) {
   background-image: url(../img/top/3.jpg);
 }
-html body main article section:nth-of-type(4) {
+html body main article .contents:nth-of-type(4) {
   background-image: url(../img/top/4.jpg);
 }
-html body main article section.load {
+html body main article .contents:first-of-type {
+  border: none !important;
+}
+html body main article .contents.load {
   width: 100%;
   margin-left: 0;
+  transition: width 20s ease , margin-left 20s ease;
 }
-html body main article section div {
-  margin: 20rem auto 0 auto;
-  padding: 0 2rem 5rem 2rem;
+html body main article .contents div {
+  margin: 0 auto;
+  padding: 20rem 2rem 5rem 2rem;
   text-align: center;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-html body main article section div header {
+html body main article .contents div header {
   color: #fff;
   margin: 0 0 3rem 0;
 }
-html body main article section div header h3 {
+html body main article .contents div header h3 {
   font-family: century;
   font-size: 2rem;
 }
-html body main article section div header p {
+html body main article .contents div header p {
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
   font-size: 0.9rem;
 }
-html body main article section div a button {
+html body main article .contents div a button {
   color: #333333;
   background-color: #fff;
   display: block;
@@ -110,27 +111,35 @@ html body main article section div a button {
   cursor: pointer;
   border: none;
 }
-html body main article section div a button:hover {
+html body main article .contents div a button:hover {
   opacity: 1;
 }
-html body main article section div a button span {
+html body main article .contents div a button span {
   margin-right: 1rem;
 }
-html body main article section div dl {
-  background: none !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+html body main article .contents div dl {
+  background: none;
+  width: 30rem;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
 }
-html body main article section div dl dt {
-  color: #fff !important;
+html body main article .contents div dl dt {
+  color: #fff;
+  float: left;
+  width: 8rem;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: right;
 }
-html body main article section div dl dd {
+html body main article .contents div dl dd {
   margin: 0 0 1rem 0;
   padding: 0 0 1rem 0;
   border-bottom: #fff 1px dotted;
+  text-align: left;
+  overflow: visible;
 }
-html body main article section div dl dd:last-of-type {
+html body main article .contents div dl dd:last-of-type {
   border: none;
 }
 html body #news {
@@ -158,6 +167,8 @@ html body #news h3 {
   font-family: century;
   display: table-cell;
   vertical-align: top;
+  position: relative;
+  z-index: 2;
 }
 html body #news #prev, html body #news #next {
   display: table-cell;

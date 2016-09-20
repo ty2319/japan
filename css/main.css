@@ -147,28 +147,28 @@ article section header p, article div.contents header p {
 article .contents {
   width: 100%;
   clear: both;
-  background: center center no-repeat fixed;
+  background: center top no-repeat fixed;
   overflow: hidden;
   background-size: cover;
   padding: 8rem 3%;
 }
 article .contents.bg0 {
-  background-image: url(../img/common/09.png);
-}
-article .contents.bg1 {
   background-image: url(../img/common/10.png);
 }
-article .contents.bg2 {
+article .contents.bg1 {
   background-image: url(../img/common/11.png);
 }
-article .contents.bg3 {
+article .contents.bg2 {
   background-image: url(../img/common/12.png);
 }
-article .contents.bg4 {
+article .contents.bg3 {
   background-image: url(../img/common/13.png);
 }
-article .contents.bg5 {
+article .contents.bg4 {
   background-image: url(../img/common/14.png);
+}
+article .contents.bg5 {
+  background-image: url(../img/common/15.png);
 }
 article .contents section {
   padding: 5rem 0;

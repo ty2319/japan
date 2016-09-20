@@ -1,19 +1,14 @@
 (function($) {	
-
-		var i	= 0;
-		var h	= 0;
-		var w	= 0;
-		var a	= 0;
-		var num	= 0;
 	
 		set = function() {	
 		
-			h = $(window).height() - $('header').height() - $('footer').height();
-			w = $(window).width();
+			var h = $(window).height() - $('header#top').height() - $('footer').height();
+			var w = $(window).width();
 			
-			$('section').each(function(index, domEle) {
-				var img = index + 1;
-				$(domEle).height(h).css('overflow' , 'auto').removeClass('contents');
+			$('article > div').removeClass('contents');
+			
+			$('article > section').each(function(index, domEle) {
+				$(domEle).height(h).css('overflow-y' , 'auto');
 				$(domEle).children().width(w / 2);
 			});
 			
@@ -21,18 +16,20 @@
 				$('section div').width(w * 0.9);
 			}
 			
-			$('main > span').css('left' , (num * 25) + '%');
 			$('#news li:first-child').addClass('current');
 		},
 		
 		move = function() {
+
+		var i	= 0;
 			
 			$('section').eq(0).addClass('load');
 			
 			$('main li').on('click' , function() {
-			
+				
+				var w		= $(window).width();
 				var hit		= $(this);
-				num			= $('main li').index(hit);
+				var num		= $('main li').index(hit);
 				var lockon	= $('section').eq(num);
 				
 				hit.siblings().removeClass('active');
@@ -83,7 +80,7 @@
 				}
 				
 				hit.addClass('active');
-				$('main > span').animate({left: (w / 4)*num} , 500);
+				$('main > span').animate({left: 25 * num + '%'} , 500);
 				
 				return false;
 			});

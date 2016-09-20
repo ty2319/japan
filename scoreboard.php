@@ -47,7 +47,7 @@ $count_ini = pg_fetch_result($rs1,0,0);
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
 <link rel="stylesheet" href="css/import.css" />
 <link rel="stylesheet" href="css/results.css" media="screen" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/common2.js"></script>
 <script type="text/javascript" src="js/results2.js"></script>
 <script type="text/javascript">
