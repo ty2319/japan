@@ -128,6 +128,7 @@ h2 {
 #global > dl > dd dl dd {
   background: none;
   margin: 0.5rem 0 0 1.5rem;
+  color: #737373;
 }
 #global > dl > dd dl dd a {
   color: #fff;
@@ -136,7 +137,7 @@ h2 {
   color: #2c7eff;
   text-decoration: line-through;
 }
-#global > dl > dd dl dd a span {
+#global > dl > dd dl dd span {
   margin-right: 0.5rem;
 }
 #global > dl > dd i {

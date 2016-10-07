@@ -174,6 +174,13 @@ article .contents section {
   padding: 5rem 0;
   background: none;
 }
+article .contents section.half {
+  padding: 1rem 3% !important;
+  min-width: 441px;
+}
+article .contents section.half:nth-of-type(2) {
+  margin-bottom: 5rem;
+}
 article .contents > img:not(.one_third):not(.half) {
   width: 100%;
   height: auto;

@@ -20,8 +20,8 @@
 				<dt>メインメニュー<i>Main menu</i></dt>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/index.html"><span class="fa fa-home"></span>トップページ<i>Top Page</i></a></dd>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/tournament.html"><span class="fa fa-sitemap"></span>トーナメント表<i>Tournament Bracket</i></a></dd>
-				<dd><a href="/symbol/hp/baseball/games/2016/japan/results.html"><span class="fa fa-list-ol"></span>試合結果<i>Results</i></a></dd>
-				<dd><a href="/symbol/hp/baseball/games/2016/japan/gallery.html"><span class="fa fa-camera"></span>ギャラリー<i>Photo gallery</i></a></dd>
+				<dd><!--<a href="/symbol/hp/baseball/games/2016/japan/results.html">--><span class="fa fa-list-ol"></span>試合結果<i>Results</i><!--</a>--></dd>
+				<dd><!--<a href="/symbol/hp/baseball/games/2016/japan/gallery.html">--><span class="fa fa-camera"></span>ギャラリー<i>Photo gallery</i><!--</a>--></dd>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/aid.html"><span class="fa fa-volume-up"></span>応援ガイド<i>Guidance of aid</i></a></dd>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/access.html"><span class="fa fa-map-marker"></span>アクセスガイド<i>Guidance to a stadium</i> </a></dd>
 			</dl>
