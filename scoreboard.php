@@ -48,7 +48,7 @@ $count_ini = pg_fetch_result($rs1,0,0);
 <link rel="stylesheet" href="css/import.css" />
 <link rel="stylesheet" href="css/results.css" media="screen" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/common2.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/results2.js"></script>
 <script type="text/javascript">
 	$(function() {

@@ -32,11 +32,15 @@ html {
 			font-size: 0.875rem;
 		}
 		
-		@for $value from 0 through 9 {
+		@for $value from 0 through 8 {
 			
 			&.bg#{$value} {
 				background-image: url(#{$ip}common/0#{$value + 1}.jpg);
 			}
+		}
+		
+		&.bg9 {
+			background-image: url(#{$ip}common/10.jpg);
 		}
 		
 		&[class*=bg] {

@@ -58,7 +58,7 @@ html body.bg8 {
   background-image: url(../img/common/09.jpg);
 }
 html body.bg9 {
-  background-image: url(../img/common/010.jpg);
+  background-image: url(../img/common/10.jpg);
 }
 html body[class*=bg] {
   background-position: center -300px;

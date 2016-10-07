@@ -51,6 +51,9 @@ article > .contents > div a {
 article > .contents > div a:hover {
   opacity: 0.8;
 }
+article > .contents img.half {
+  margin-bottom: 5rem;
+}
 article > .contents ul {
   display: table;
   background-color: rgba(26, 26, 26, 0.8);

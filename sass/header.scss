@@ -143,6 +143,7 @@ h2 {
 				dd {
 					background: none;
 					margin: 0.5rem 0 0 1.5rem;
+					color: lighten($black , 45%);
 					
 					a {
 						color: $white;
@@ -151,10 +152,10 @@ h2 {
 							color: $blue;
 							text-decoration: line-through; 
 						}
+					}
 						
-						span {
-							margin-right: 0.5rem;
-						}
+					span {
+						margin-right: 0.5rem;
 					}
 				}
 			}
