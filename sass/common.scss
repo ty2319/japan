@@ -14,6 +14,15 @@ html {
 		background: center top no-repeat fixed;
 		background-size: cover;
 		line-height: 1.75rem;
+		
+		.menu_open {
+			pointer-events: none;
+			transition: all .2s ease-out;
+			-webkit-filter: blur(5px);
+				 -moz-filter: blur(5px);
+				  -ms-filter: blur(5px);
+					  filter: blur(5px);
+		}
 	
 		@include media($nf) {
 			font-size: 0.75rem;
@@ -23,36 +32,15 @@ html {
 			font-size: 0.875rem;
 		}
 		
-		&.bg0 {
-			background-image: url(#{$ip}common/01.jpg);
+		@for $value from 0 through 8 {
+			
+			&.bg#{$value} {
+				background-image: url(#{$ip}common/0#{$value + 1}.jpg);
+			}
 		}
 		
-		&.bg1 {
-			background-image: url(#{$ip}common/02.jpg);
-		}
-		
-		&.bg2 {
-			background-image: url(#{$ip}common/03.jpg);
-		}
-		
-		&.bg3 {
-			background-image: url(#{$ip}common/04.jpg);
-		}
-		
-		&.bg4 {
-			background-image: url(#{$ip}common/05.jpg);
-		}
-		
-		&.bg5 {
-			background-image: url(#{$ip}common/06.jpg);
-		}
-		
-		&.bg6 {
-			background-image: url(#{$ip}common/07.jpg);
-		}
-		
-		&.bg7 {
-			background-image: url(#{$ip}common/08.jpg);
+		&.bg9 {
+			background-image: url(#{$ip}common/10.jpg);
 		}
 		
 		&[class*=bg] {

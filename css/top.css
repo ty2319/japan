@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 html body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 html body[class*=bg] {
   background: none;
@@ -10,217 +10,186 @@ html body header#top {
   position: relative;
   z-index: 2;
 }
-html body #back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  overflow: hidden;
-}
-html body #back div {
-  background: url(../img/top/4.jpg), url(../img/top/0.jpg), url(../img/top/1.jpg), url(../img/top/2.jpg), url(../img/top/3.jpg) no-repeat center center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-html body #back div.inner {
-  transform: scale(1.5, 1.5) rotate(12deg);
-  transition: all 30s ease 0.5s;
-}
 html body main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: url(../img/common/dot.png);
+  width: 100%;
 }
-html body main > div {
-  position: absolute;
-  background-color: #000;
+html body main > span {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 0;
+  z-index: 0;
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  width: 25%;
+  text-align: center;
 }
 html body main article {
   background: none;
-  height: 100%;
-  border-right: 5% black solid;
-  overflow-y: auto;
+  width: 100%;
 }
-html body main article #button {
-  position: absolute;
-  top: 54%;
+html body main article > ul {
+  position: fixed;
+  bottom: 2.5rem;
   left: 0;
-  z-index: 10;
-  font-family: century;
-}
-html body main article #button li {
+  z-index: 1;
+  display: table;
+  width: 100%;
   background-color: #012052;
-  color: #fff;
+}
+html body main article > ul li {
+  display: table-cell;
   text-align: center;
+  padding: 0.5rem;
+  color: #fff;
+  width: 25%;
   cursor: pointer;
-  min-width: 60px;
-  min-height: 60px;
-  margin-bottom: 1px;
-  padding-top: 35%;
-  opacity: .8;
-  font-size: 0.9rem;
-  font-weight: bold;
 }
-html body main article #button li.on {
-  background-color: #000;
+html body main article > ul li:hover {
+  background-color: #004dc5;
 }
-html body main article section {
+html body main article > ul li.active {
+  background-color: #fff;
+  color: #012052;
+}
+html body main article .contents {
   color: #fff;
-  display: none;
   padding: 0 !important;
-  background: none !important;
-  overflow: auto;
-  height: 100%;
-  line-height: 1.75rem;
+  width: 150%;
+  margin-left: -25%;
+  background: center center no-repeat scroll;
+  background-size: cover;
 }
-html body main article section header {
-  position: absolute;
-  top: 45%;
-  left: 27%;
-  z-index: 3;
-  width: 10% !important;
+html body main article .contents:nth-of-type(1) {
+  background-image: url(../img/top/1.jpg);
+}
+html body main article .contents:nth-of-type(2) {
+  background-image: url(../img/top/2.jpg);
+}
+html body main article .contents:nth-of-type(3) {
+  background-image: url(../img/top/3.jpg);
+}
+html body main article .contents:nth-of-type(4) {
+  background-image: url(../img/top/4.jpg);
+}
+html body main article .contents:first-of-type {
+  border: none !important;
+}
+html body main article .contents.load {
+  width: 100%;
+  margin-left: 0;
+  transition: width 20s ease , margin-left 20s ease;
+}
+html body main article .contents div {
+  margin: 0 auto;
+  padding: 20rem 2rem 5rem 2rem;
+  text-align: center;
+  text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
+}
+html body main article .contents div header {
   color: #fff;
-  margin: 0;
+  margin: 0 0 3rem 0;
 }
-html body main article section header:after {
-  content: "";
-}
-html body main article section header h3 {
+html body main article .contents div header h3 {
   font-family: century;
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
-html body main article section header p {
+html body main article .contents div header p {
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
   font-size: 0.9rem;
 }
-html body main article section div.tse-scrollable {
-  position: absolute;
-  top: 55.5%;
-  left: 8.1%;
-  z-index: 10;
-  width: 18%;
-  overflow: hidden;
-}
-@media all and (max-width: 1200px) {
-  html body main article section div.tse-scrollable {
-    width: 220px !important;
-  }
-}
-html body main article section div.tse-scrollable .close {
-  font-size: 2.5rem;
-  color: #fff;
-  cursor: pointer;
-  text-align: right;
-  margin-bottom: 1rem;
-}
-html body main article section div.tse-scrollable p a, html body main article section div.tse-scrollable li a {
+html body main article .contents div a button {
   color: #333333;
   background-color: #fff;
   display: block;
-  margin-top: 1rem;
-  padding: 0.5rem;
+  margin: 1rem 0 0 25%;
+  padding: 1rem;
   text-align: center;
   opacity: 0.8;
   overflow: hidden;
+  width: 50%;
+  cursor: pointer;
+  border: none;
 }
-html body main article section div.tse-scrollable p a:hover, html body main article section div.tse-scrollable li a:hover {
+html body main article .contents div a button:hover {
   opacity: 1;
 }
-html body main article section div.tse-scrollable dl {
-  background: none !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+html body main article .contents div a button span {
+  margin-right: 1rem;
 }
-html body main article section div.tse-scrollable dl dt {
-  color: #fff !important;
+html body main article .contents div dl {
+  background: none;
+  width: 37rem;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
 }
-html body main article section div.tse-scrollable dl dd {
+html body main article .contents div dl dt {
+  color: #fff;
+  float: left;
+  width: 8rem;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: right;
+}
+html body main article .contents div dl dd {
   margin: 0 0 1rem 0;
   padding: 0 0 1rem 0;
   border-bottom: #fff 1px dotted;
+  text-align: left;
+  overflow: visible;
 }
-html body main article section div.tse-scrollable dl dd:last-of-type {
+html body main article .contents div dl dd:last-of-type {
   border: none;
 }
 html body #news {
   position: absolute;
-  top: 5.4rem;
-  left: 65%;
-  z-index: 5;
-  width: 45.5%;
+  top: 5.5rem;
+  left: 30%;
+  z-index: 1;
+  width: 70%;
   background: none !important;
   line-height: 100%;
+  display: table;
+  overflow: hidden !important;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1200px) {
   html body #news {
-    position: absolute;
-    top: 11rem;
-    left: 1rem;
-    z-index: 3;
-    width: 1500px !important;
+    display: none;
   }
 }
 html body #news h3 {
-  width: 10%;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 1rem;
   background-color: #fff;
   color: #333333;
   font-weight: bold;
   text-align: center;
   font-family: century;
-  display: inline-block;
+  display: table-cell;
   vertical-align: top;
-}
-@media all and (max-width: 1500px) {
-  html body #news h3 {
-    width: 5%;
-    padding: 0.4rem 0.5rem 0 0.5rem;
-    min-width: 4rem;
-    height: 1.6rem;
-  }
+  position: relative;
+  z-index: 2;
 }
 html body #news #prev, html body #news #next {
-  display: inline-block;
-  margin-left: 1rem;
+  display: table-cell;
+  padding-left: 1rem;
   cursor: pointer;
   color: #fff;
   font-size: 1.5rem;
-}
-@media all and (max-width: 1500px) {
-  html body #news #prev, html body #news #next {
-    font-size: 1.25rem;
-  }
+  width: 1rem;
 }
 html body #news #prev {
   display: none;
 }
 html body #news div {
-  width: 100%;
+  display: table-cell;
   background: none !important;
   padding: 0;
-}
-html body #news div h3 {
-  width: 10%;
-  padding: 0.2rem 0;
-  background-color: #fff;
-  color: #333333;
-  font-weight: bold;
-  text-align: center;
-  font-family: century;
-  display: inline-block;
-  vertical-align: top;
-}
-@media all and (max-width: 1500px) {
-  html body #news div h3 {
-    width: 5%;
-  }
+  text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
 html body #news div ul {
   margin-top: 0.5rem;
+  padding-left: 1rem;
   display: table;
 }
 html body #news div ul li {
@@ -239,9 +208,6 @@ html body footer {
   right: 0;
   z-index: 10;
   width: 100%;
-}
-html #live {
-  display: none;
 }
 html #pv {
   position: absolute;

@@ -15,21 +15,20 @@ article #pan {
   padding: 0.5rem;
   width: 100%;
   color: #fff;
-  background-color: rgba(1, 32, 82, 0.7);
+  background-color: rgba(1, 32, 82, 0.9);
 }
 article header#title {
   text-align: center;
   color: #fff !important;
-  padding: 10rem 0 2rem 0;
+  padding: 7rem 0 0 0;
   transform: translateY(50px);
   opacity: 0;
-  text-shadow: 0.1rem 0.1rem 0.1rem #000;
+  text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
 article header#title.load {
   transform: translateY(0);
   opacity: 1;
   transition: all 1s ease 0;
-  text-shadow: 3px rgba(0, 0, 0, 0.3);
 }
 article header#title h3 {
   font-size: 2.5rem;
@@ -37,7 +36,7 @@ article header#title h3 {
 }
 article header#title h3 span {
   display: block;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 article header#title p {
@@ -45,6 +44,14 @@ article header#title p {
   font-size: 1.5rem;
   font-weight: normal;
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+}
+article header#title p#scroll {
+  margin: 5rem 0 0;
+  cursor: pointer;
+}
+article header#title p#scroll span {
+  display: block;
+  margin: -0.5rem 0 0;
 }
 article .half {
   width: 50%;
@@ -102,7 +109,7 @@ article div.contents, article .double {
   width: 100% !important;
 }
 article div.contents h4, article .double h4 {
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 article div.contents .half, article .double .half {
   padding-top: 0 !important;
@@ -125,7 +132,7 @@ article .double .one_third p {
 }
 article section header, article div.contents header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
   color: #012052;
 }
 article section header h4, article div.contents header h4 {
@@ -140,32 +147,39 @@ article section header p, article div.contents header p {
 article .contents {
   width: 100%;
   clear: both;
-  background: center center no-repeat fixed;
+  background: center top no-repeat fixed;
   overflow: hidden;
   background-size: cover;
-  padding: 10rem 3%;
+  padding: 8rem 3%;
 }
 article .contents.bg0 {
-  background-image: url(../img/common/09.png);
-}
-article .contents.bg1 {
   background-image: url(../img/common/10.png);
 }
-article .contents.bg2 {
+article .contents.bg1 {
   background-image: url(../img/common/11.png);
 }
-article .contents.bg3 {
+article .contents.bg2 {
   background-image: url(../img/common/12.png);
 }
-article .contents.bg4 {
+article .contents.bg3 {
   background-image: url(../img/common/13.png);
 }
-article .contents.bg5 {
+article .contents.bg4 {
   background-image: url(../img/common/14.png);
+}
+article .contents.bg5 {
+  background-image: url(../img/common/15.png);
 }
 article .contents section {
   padding: 5rem 0;
   background: none;
+}
+article .contents section.half {
+  padding: 1rem 3% !important;
+  min-width: 441px;
+}
+article .contents section.half:nth-of-type(2) {
+  margin-bottom: 5rem;
 }
 article .contents > img:not(.one_third):not(.half) {
   width: 100%;

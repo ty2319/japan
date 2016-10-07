@@ -21,16 +21,15 @@ article {
 		header#title {
 			text-align: center;
 			color: $white !important;
-			padding: 10rem 0 2rem 0;
+			padding: 7rem 0 0 0;
 			transform: translateY(50px);
 			opacity: 0;
-			text-shadow: 0.1rem 0.1rem 0.1rem $black;
+			text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
 			
 			&.load {
 				transform: translateY(0);
 				opacity: 1;
 				transition: all 1s ease 0;
-				text-shadow: 3px rgba($black, 0.3);
 			}
 			
 				
@@ -40,7 +39,7 @@ article {
 				
 				span {
 					display: block;
-					font-size: 4rem;
+					font-size: 3rem;
 					margin-bottom: 1rem;
 				}
 			}
@@ -50,6 +49,16 @@ article {
 				font-size: 1.5rem;
 				font-weight: normal;
 				font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+				
+				&#scroll {
+					margin: 5rem 0 0;
+					cursor: pointer;
+			
+					span {
+						display: block;
+						margin: -0.5rem 0 0;
+					}
+				}
 			}
 		}
 		
@@ -120,7 +129,7 @@ article {
 		width: $max !important;
 		
 		h4 {
-			margin-top: 5rem;
+			margin-top: 8rem;
 		}
 		
 		.half {
@@ -137,6 +146,7 @@ article {
 			border: none;
 		}
 	}
+	
 	.double .one_third {
 		padding-bottom: 5rem !important;
 		
@@ -149,7 +159,7 @@ article {
 		
 	section header,div.contents header {
 		text-align: center;
-		margin-bottom: 5rem;
+		margin-bottom: 7rem;
 		color: $navy;
 		
 		h4 {
@@ -167,38 +177,30 @@ article {
 	.contents {
 		width: $max;
 		clear: both;
-		background: center center no-repeat fixed;
+		background: center top no-repeat fixed;
 		overflow: hidden;
 		background-size: cover;
-		padding: 10rem $max*0.03;
+		padding: 8rem $max*0.03;
 		
-		&.bg0 {
-			background-image: url(#{$ip}common/09.png);
-		}
-		
-		&.bg1 {
-			background-image: url(#{$ip}common/10.png);
-		}
-		
-		&.bg2 {
-			background-image: url(#{$ip}common/11.png);
-		}
-		
-		&.bg3 {
-			background-image: url(#{$ip}common/12.png);
-		}
+		@for $value from 0 through 5 {
 			
-		&.bg4 {
-			background-image: url(#{$ip}common/13.png);
-		}
-		
-		&.bg5 {
-			background-image: url(#{$ip}common/14.png);
+			&.bg#{$value} {
+				background-image: url(#{$ip}common/#{$value + 10}.png);
+			}
 		}
 		
 		section {
 			padding: 5rem 0;
 			background: none;
+			
+			&.half {
+				padding: 1rem $max*0.03 !important;
+				min-width: 441px;
+				
+				&:nth-of-type(2) {
+					margin-bottom: 5rem;
+				}
+			}
 		}
 		
 		&> img:not(.one_third):not(.half) {

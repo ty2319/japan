@@ -12,6 +12,14 @@ html body {
   background-size: cover;
   line-height: 1.75rem;
 }
+html body .menu_open {
+  pointer-events: none;
+  transition: all .2s ease-out;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 @media all and (max-width: 940px) {
   html body {
     font-size: 0.75rem;
@@ -45,6 +53,12 @@ html body.bg6 {
 }
 html body.bg7 {
   background-image: url(../img/common/08.jpg);
+}
+html body.bg8 {
+  background-image: url(../img/common/09.jpg);
+}
+html body.bg9 {
+  background-image: url(../img/common/10.jpg);
 }
 html body[class*=bg] {
   background-position: center -300px;
