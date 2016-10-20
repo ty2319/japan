@@ -93,40 +93,18 @@
 	
 	nav = function() {
 		
-		path = location.pathname
-		if(path.match("index") || $('span').hasClass('fa-chevron-circle-left')) {
-			$('nav#global a').eq(0).addClass('active');
-	　　}
-		if(path.match("tournament")){
-			$('nav#global a').eq(1).addClass('active');
-	　　}
-		/*if(path.match("results")){
-			$('nav#global a').eq(2).addClass('active');
-	　　}
-		if(path.match("gallery")){
-			$('nav#global a').eq(3).addClass('active');
-	　　}*/
-		if(path.match("aid")){
-			$('nav#global a').eq(2).addClass('active');
-	　　}
-		if(path.match("access")){
-			$('nav#global a').eq(3).addClass('active');
-	　　}
-		/*if(path.match("addition")){
-			$('nav#global a').eq(6).addClass('active');
-		}*/
-		if(path.match("mascot")){
-			$('nav#global a').eq(4).addClass('active');
-	　　}
-		/*if(path.match("hero")){
-			$('nav#global a').eq(12).addClass('active');
-	　　}*/
-		if(path.match("history")){
-			$('nav#global a').eq(5).addClass('active');
-	　　}
-		if(path.match("past")){
-			$('nav#global a').eq(6).addClass('active');
-	　　}
+		var path	= location.href.split('/');
+		var loc		= path[path.length-1];
+		
+		$("nav#global a").each(function(e,v){
+			href = $(this).attr("href");
+			if(loc == "") {
+				$(v).addClass('active');
+			}
+			if(href.match(loc)) {
+				$(this).addClass("active");
+			}
+		});
 			
 		$('.menu-trigger:not(.on)').hover(function() {
 			$('#global > dl > dd').slideDown(500).css('display' , 'table-cell');
