@@ -22,14 +22,15 @@ $(document).ready(function(){
 	
 	$('.fancy dt + dd').css('margin',0);
 	$('.fancy > dt:first-child').css({'border':'none','margin-top': 0,'padding-top': '1em'});
+	
 	$('.accordion').click(function(){
 		$(this).next('div').slideToggle('slow' ,function() {
 			$('section > .half').tile();
 		});
 	}).toggle(function() {
-		$('.accordion span').text("※クリックすると上に閉じます。 ▲");
+		$('span' , this).text("※クリックすると上に閉じます。 ▲");
 	}, function() {
-		$('.accordion span').text("※クリックすると下に開きます。 ▼");
+		$('span' , this).text("※クリックすると下に開きます。 ▼");
 	});
 	
 }); 

@@ -21,6 +21,11 @@ article {
 			&> section {
 				padding: 0 $max*0.03 !important;
 				background-color: $white !important;
+				border: none !important;
+				
+				&:not(.left):not(.right) {
+					width: $max * 0.485;
+				}
 			}
 						
 			&> .left {
@@ -35,6 +40,11 @@ article {
 				width: $max * 0.47;
 				border: none !important;
 				display: none;
+				
+				&> img {
+					padding: 0 !important;
+					border: none !important;
+				}
 			}
 			
 			h5 {
@@ -45,7 +55,9 @@ article {
 				border-bottom: $navy 3px double;
 			}
 			
-			a {
+			
+			
+			a button {
 				display: block;
 				text-decoration: none;
 				background-color: $blue;
@@ -54,15 +66,14 @@ article {
 				text-align: center;
 				color: $white;
 				overflow: hidden;
-				
+				width: $max;
+				cursor: pointer;
+				border: none;
+	
 				&:hover {
 					opacity: 0.8;
 				}
 			}
-		}
-		
-		img.half {
-			margin-bottom: 5rem;
 		}
 
 		ul {
@@ -75,7 +86,7 @@ article {
 			
 			li {
 				display: table-cell;
-				padding: 1rem;
+				padding: 1rem 1.5rem;
 				font-weight: bold;
 					
 				&.show {

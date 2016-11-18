@@ -1,11 +1,5 @@
 $(window).on('load resize' , function() {
 	
-	if ($(window).width() > 940) {
-		$('div.half img').css({'width':$(window).width()/2, 'height':'auto' , 'min-width' : 630});
-	} else {
-		$('div.half img').css({'width':$(window).width()/2 , 'min-width': 630 , 'height':'auto'});
-	}
-	
 	$('article > .head').each(function() {
         $('table.quarter:eq(0)',this).addClass('blue');
         $('table.quarter:eq(1)',this).addClass('border').css('margin-left','50%');

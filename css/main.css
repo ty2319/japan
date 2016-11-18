@@ -91,7 +91,6 @@ article .one_third img {
 }
 article .quarter {
   width: 25%;
-  min-width: 211.5px;
   float: left;
   clear: none;
   padding: 1rem !important;
@@ -119,7 +118,7 @@ article div.contents h5, article .double h5 {
 }
 article div.contents > img, article .double > img {
   height: auto;
-  padding: 0 1.5% !important;
+  padding: 0 3% 5rem 0 !important;
   border: none;
 }
 article .double .one_third {

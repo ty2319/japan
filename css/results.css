@@ -2,7 +2,6 @@
 .tail .half, .head .half {
   padding: 0 3% !important;
   margin-left: -75%;
-  min-width: 470px;
   overflow: hidden;
   text-align: center;
 }
@@ -41,9 +40,6 @@ table {
   border-collapse: collapse;
   border: #b3b3b3 solid 1px;
   width: 100%;
-}
-table.quarter {
-  min-width: 235.04px;
 }
 table caption span {
   font-size: 1.25rem;

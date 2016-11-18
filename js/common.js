@@ -96,13 +96,13 @@
 		var path	= location.href.split('/');
 		var loc		= path[path.length-1];
 		
-		$("nav#global a").each(function(e,v){
-			href = $(this).attr("href");
-			if(loc == "") {
-				$(v).addClass('active');
+		$('nav#global a').each(function(e,v){
+			href = $(this).attr('href');
+			if(loc == '') {
+				loc = 'index';
 			}
-			if(href.match(loc)) {
-				$(this).addClass("active");
+			if(href.match('japan') && href.match(loc)) {
+				$(this).addClass('active');
 			}
 		});
 			

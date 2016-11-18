@@ -6,7 +6,6 @@
 .tail .half,.head .half {
 	padding : 0 $max*0.03 !important;
 	margin-left: -$max * 0.75;
-	min-width: $nf / 2;
 	overflow: hidden;
 	text-align: center;
 	
@@ -55,10 +54,6 @@ table {
 	border-collapse: collapse;
 	border: lighten($black,70%) solid 1px;
 	width: $max;
-	
-	&.quarter {
-		min-width: 235.04px;
-	}
 	
 	caption span {
 		font-size: 1.25rem;

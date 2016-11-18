@@ -27,11 +27,11 @@
 			}
 		}
 		
-		$('#topnavi li a,footer li a,#issues a').prepend('â‰« ');
-		$('#side li a').append(' â—');
-		$('.box dt').not('#issues dt').append('ï¼š');
-		$('.dot dd').prepend('ãƒ»');
-		$('.box2 dt').prepend('â€•ã€€').append('ã€€â€•');
+		$('#topnavi li a,footer li a,#issues a').prepend('¢ä ');
+		$('#side li a').append(' ¡ü');
+		$('.box dt').not('#issues dt').append('¡§');
+		$('.dot dd').prepend('¡¦');
+		$('.box2 dt').prepend('¡½¡¡').append('¡¡¡½');
 	},
 	
 	section = function() {
@@ -93,40 +93,18 @@
 	
 	nav = function() {
 		
-		path = location.pathname
-		if(path.match("index") || $('span').hasClass('fa-chevron-circle-left')) {
-			$('nav#global a').eq(0).addClass('active');
-	ã€€ã€€}
-		if(path.match("tournament")){
-			$('nav#global a').eq(1).addClass('active');
-	ã€€ã€€}
-		/*if(path.match("results")){
-			$('nav#global a').eq(2).addClass('active');
-	ã€€ã€€}
-		if(path.match("gallery")){
-			$('nav#global a').eq(3).addClass('active');
-	ã€€ã€€}
-		if(path.match("aid")){
-			$('nav#global a').eq(2).addClass('active');
-	ã€€ã€€}*/
-		if(path.match("access")){
-			$('nav#global a').eq(2).addClass('active');
-	ã€€ã€€}
-		/*if(path.match("addition")){
-			$('nav#global a').eq(6).addClass('active');
-		}
-		if(path.match("mascot")){
-			$('nav#global a').eq(4).addClass('active');
-	ã€€ã€€}
-		/*if(path.match("hero")){
-			$('nav#global a').eq(12).addClass('active');
-	ã€€ã€€}*/
-		if(path.match("history")){
-			$('nav#global a').eq(3).addClass('active');
-	ã€€ã€€}
-		if(path.match("past")){
-			$('nav#global a').eq(4).addClass('active');
-	ã€€ã€€}
+		var path	= location.href.split('/');
+		var loc		= path[path.length-1];
+		
+		$('nav#global a').each(function(e,v){
+			href = $(this).attr('href');
+			if(loc == '') {
+				loc = 'index';
+			}
+			if(href.match('japan') && href.match(loc)) {
+				$(this).addClass('active');
+			}
+		});
 			
 		$('.menu-trigger:not(.on)').hover(function() {
 			$('#global > dl > dd').slideDown(500).css('display' , 'table-cell');
@@ -191,21 +169,21 @@
 		return false;
 		});
 		
-		var set =  $('#global').height() + 1;//ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ä¸Šéƒ¨ã‹ã‚‰ã©ã‚Œãã‚‰ã„ã®ä½ç½®ã§å¤‰åŒ–ã•ã›ã‚‹ã‹
+		var set =  $('#global').height() + 1;//¥¦¥¤¥ó¥É¥¦¾åÉô¤«¤é¤É¤ì¤°¤é¤¤¤Î°ÌÃÖ¤ÇÊÑ²½¤µ¤»¤ë¤«
 		var boxTop = new Array;
 		var current = -1;
 		var startPosition = 0;
 		var navtop = $('#global').offset().top;
 		
-		//å„è¦ç´ ã®ä½ç½®
+		//³ÆÍ×ÁÇ¤Î°ÌÃÖ
 		$(window).on("load resize", function(){
 			$('article > section,article > div').each(function(i) {
 				boxTop[i] = $(this).offset().top;
 			});
 		});
-		//æœ€åˆã®è¦ç´ ã«class="on"ã‚’ã¤ã‘ã‚‹
+		//ºÇ½é¤ÎÍ×ÁÇ¤Ëclass="on"¤ò¤Ä¤±¤ë
 		changeBox(0);
-		//ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã—ãŸæ™‚ã®å‡¦ç†
+		//¥¹¥¯¥í¡¼¥ë¤·¤¿»ş¤Î½èÍı
 		$(window).scroll(function(){
 			
 			var scrollPosition	= $(window).scrollTop();		
@@ -238,22 +216,22 @@
 			startPosition = scrollPosition;
 		});
 		
-		//ãƒŠãƒ“ã®å‡¦ç†
+		//¥Ê¥Ó¤Î½èÍı
 		function changeBox(secNum) {
 			if (secNum != current) {
 				
 				current = secNum;
-				secNum2 = secNum + 1;//HTMLé †åºç”¨
+				secNum2 = secNum + 1;//HTML½ç½øÍÑ
 				$('article #side li').removeClass('on');
 				$('article #side li:nth-child(' + secNum2 +')').addClass('on');
 	
-				/* ä½ç½®ã«ã‚ˆã£ã¦å€‹åˆ¥ã«å‡¦ç†ã‚’ã—ãŸã„å ´åˆã€€
+				/* °ÌÃÖ¤Ë¤è¤Ã¤Æ¸ÄÊÌ¤Ë½èÍı¤ò¤·¤¿¤¤¾ì¹ç¡¡
 				if (current == 0) {
-					// ç¾åœ¨åœ°ãŒsection1ã®å ´åˆã®å‡¦ç†
+					// ¸½ºßÃÏ¤¬section1¤Î¾ì¹ç¤Î½èÍı
 				} else if (current == 1) {
-					// ç¾åœ¨åœ°ãŒsection2ã®å ´åˆã®å‡¦ç†
+					// ¸½ºßÃÏ¤¬section2¤Î¾ì¹ç¤Î½èÍı
 				} else if (current == 2) {
-					// ç¾åœ¨åœ°ãŒsection3ã®å ´åˆã®å‡¦ç†
+					// ¸½ºßÃÏ¤¬section3¤Î¾ì¹ç¤Î½èÍı
 				}*/
 			}
 		};

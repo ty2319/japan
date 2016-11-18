@@ -12,6 +12,10 @@ article > .contents > div > img {
 article > .contents > div > section {
   padding: 0 3% !important;
   background-color: #fff !important;
+  border: none !important;
+}
+article > .contents > div > section:not(.left):not(.right) {
+  width: 48.5%;
 }
 article > .contents > div > .left {
   position: absolute;
@@ -31,6 +35,10 @@ article > .contents > div > .right {
   border: none !important;
   display: none;
 }
+article > .contents > div > .right > img {
+  padding: 0 !important;
+  border: none !important;
+}
 article > .contents > div h5 {
   margin: 2rem 0;
   padding: 1rem;
@@ -38,7 +46,7 @@ article > .contents > div h5 {
   border-top: #012052 3px double;
   border-bottom: #012052 3px double;
 }
-article > .contents > div a {
+article > .contents > div a button {
   display: block;
   text-decoration: none;
   background-color: #2c7eff;
@@ -47,12 +55,12 @@ article > .contents > div a {
   text-align: center;
   color: #fff;
   overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  border: none;
 }
-article > .contents > div a:hover {
+article > .contents > div a button:hover {
   opacity: 0.8;
-}
-article > .contents img.half {
-  margin-bottom: 5rem;
 }
 article > .contents ul {
   display: table;
@@ -64,7 +72,7 @@ article > .contents ul {
 }
 article > .contents ul li {
   display: table-cell;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   font-weight: bold;
 }
 article > .contents ul li.show a {

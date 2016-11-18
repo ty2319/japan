@@ -108,7 +108,6 @@ article {
 	
 	.quarter {
 		width: $max / 4;
-		min-width: $nf*0.9 / 4;
 		float: left;
 		clear: none;
 		padding: 1rem !important;
@@ -142,7 +141,7 @@ article {
 		
 		&> img {
 			height: auto;
-			padding: 0 $max*0.015 !important;
+			padding: 0 $max*0.03 5rem 0 !important;
 			border: none;
 		}
 	}
