@@ -128,8 +128,8 @@
 							$('#news li').removeClass('current');
 							$('#news li:eq(0)').addClass('current');
 							$('#next').attr('href' , '#news1');	
-							$('#next').fadeIn('fast');
-							$('#prev').fadeOut('fast');
+							$('#next').show();
+							$('#prev').hide();
 							distance = 0;
 						},7000);
 					}
@@ -154,15 +154,15 @@
 				
 				$('#news ul').animate({marginLeft: nw * -lockonnum} , 500 , function() {
 					if (lockonnum <= 0) {
-						$('#prev').fadeOut('fast');
+						$('#prev').hide();
 					} else {
-						$('#prev').fadeIn('fast');
+						$('#prev').show();
 					}
 					
 					if (lockonnum+1 == cnt) {
-						$('#next').fadeOut('fast');
+						$('#next').hide();
 					} else {
-						$('#next').fadeIn('fast');
+						$('#next').show();
 					}
 				
 					$('#prev').attr('href' , '#' + preid);

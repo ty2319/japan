@@ -169,6 +169,7 @@ html body #news h3 {
   vertical-align: top;
   position: relative;
   z-index: 2;
+  width: 2rem;
 }
 html body #news #prev, html body #news #next {
   display: table-cell;
